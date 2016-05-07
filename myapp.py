@@ -20,7 +20,7 @@ def check():
         tmp = [timestamp, nonce, token]  
         tmp.sort()  
         tmp = ''.join(tmp)  
-        if signature == sha1(tmp).hexdigest():  
+        if signature == sha1(tmp.encode('utf-8')).hexdigest():  
             return  make_response(echostr)  
         else:  
             return "Access denied."  
