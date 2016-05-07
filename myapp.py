@@ -12,7 +12,7 @@ def index():
 @app.route('/check',  methods=['GET', 'POST'])  
 def check():  
     if request.method == 'GET':  
-        token = r'luchujie' 
+        token ='luchujie' 
         signature = request.args.get('signature', '')  
         echostr = request.args.get('echostr', '')  
         timestamp = request.args.get('timestamp', '')  
