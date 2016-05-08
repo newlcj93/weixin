@@ -82,13 +82,15 @@ def wechat_auth():
         # 在这里解析 message.content 也就是用户发来的文字
         if message.type == 'text':
             if message.content.lower() in ('h', 'help'):
-                response = wechat.response_text(u'z 看知乎日报\nv 看 V2EX 十大\nb 为查看 blog 最新文章\nh 为帮助\n输入其他文字与机器人对话 : )')
+                response = wechat.response_text(u'z 看知乎日报\nv 看 V2EX 十大\nh 为帮助\n输入其他文字与机器人对话 : )')
             elif message.content == 'wechat':
                 response = wechat.response_text(u'^_^')
             elif message.content[0:3] == 'test':
                 response = wechat.response_text(u'I\'m testing ' + message.content[4:])
-            elif message.content.lower() in ('b', 'blog'):
-                response = wechat.response_news(get_blog_articles())
+            elif (u'陆' or '杰') in message.content:
+                response = wechat.response_text(u'爸爸是个天才')
+            elif (u'俞汭蔚' or u'内内') in message.content:
+                response = wechat.response_text(u'内内,为什么你名字那么难写')
             elif message.content.upper() in ('V', 'V2EX'):
                 response = wechat.response_news(get_v2ex_news())
             elif message.content.upper() in ('Z', 'ZHIHU'):
