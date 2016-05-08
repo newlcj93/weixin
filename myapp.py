@@ -87,7 +87,7 @@ def wechat_auth():
                 response = wechat.response_text(u'^_^')
             elif message.content[0:3] == 'test':
                 response = wechat.response_text(u'I\'m testing ' + message.content[4:])
-            elif (u'陆' or '杰') in message.content:
+            elif (u'陆' or u'杰') in message.content:
                 response = wechat.response_text(u'爸爸是个天才')
             elif (u'俞汭蔚' or u'内内') in message.content:
                 response = wechat.response_text(u'内内,为什么你名字那么难写')
