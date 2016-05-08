@@ -103,6 +103,8 @@ def wechat_auth():
             response = wechat.response_text(u'您的位置我已收到')
         elif message.type == 'subscribe':
             response = wechat.response_text(u'oh...你居然关注了,其实我自己也不知道关注这个号有啥用.\nz 看知乎日报\nv 看 V2EX 十大\nh 为帮助\n输入其他文字与机器人对话 : )')
+        elif message.type == 'unsubscribe':
+            response = wechat.response_text(u'呜呜呜,爱我别走.....')
         else:
             response = wechat.response_text(u'未知类型。您发的是什么？')
         return response
