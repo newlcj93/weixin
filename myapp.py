@@ -58,7 +58,7 @@ def get_v2ex_news():
     return news_str
 
 
-app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def wechat_auth():
     wechat = WechatBasic(token=TOKEN)
     if request.method == 'GET':
@@ -104,5 +104,5 @@ def wechat_auth():
         return response
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 443))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='127.0.0.1', debug=True)
 
