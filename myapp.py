@@ -74,7 +74,7 @@ def wechat_auth():
         else:
             return 'Signature Mismatch'
     else:
-        body_text=request.stream.read()
+        body_text=request.data
         wechat.parse_data(body_text)
         # 获得解析结果, message 为 WechatMessage 对象 (wechat_sdk.messages中定义)
         message = wechat.get_message()
