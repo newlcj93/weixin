@@ -62,7 +62,7 @@ def get_v2ex_news():
 def wechat_auth():
     wechat = WechatBasic(token=TOKEN)
     if request.method == 'GET':
-        token = 'weixin'  # your token
+        token = TOKEN  # your token
         query = request.args  # GET 方法附上的参数
         signature = query.get('signature', '')
         timestamp = query.get('timestamp', '')
