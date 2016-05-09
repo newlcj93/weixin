@@ -12,10 +12,10 @@ app = Flask(__name__)
 
 
 # 图灵机器人的 API KEY
-TURING_API_KEY = '15a3f5d45e862e7c349705d463d66c27'
+TURING_API_KEY = '********'
 
 # 微信公众平台 TOKEN
-TOKEN = 'weixin'
+TOKEN = '****'
 
 # 图灵机器人
 def get_turing(message):
@@ -89,7 +89,7 @@ def wechat_auth():
                 response = wechat.response_text(u'I\'m testing ' + message.content[4:])
             elif (u'陆' or u'杰') in message.content:
                 response = wechat.response_text(u'爸爸是个天才')
-            elif (u'俞汭蔚' or u'内内') in message.content:
+            elif (u'***' or u'内内') in message.content:
                 response = wechat.response_text(u'内内,为什么你名字那么难写')
             elif message.content.upper() in ('V', 'V2EX'):
                 response = wechat.response_news(get_v2ex_news())
