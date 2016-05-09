@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from flask import Flask, g,request, make_response
